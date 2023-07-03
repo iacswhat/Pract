@@ -1,0 +1,15 @@
+D:\ЛЕКЦИИ\LP\3Курс\6\Pract\task_1\my_task_1\obj\Debug\net6.0\my_task_1.csproj.AssemblyReference.cache
+D:\ЛЕКЦИИ\LP\3Курс\6\Pract\task_1\my_task_1\obj\Debug\net6.0\my_task_1.GeneratedMSBuildEditorConfig.editorconfig
+D:\ЛЕКЦИИ\LP\3Курс\6\Pract\task_1\my_task_1\obj\Debug\net6.0\my_task_1.AssemblyInfoInputs.cache
+D:\ЛЕКЦИИ\LP\3Курс\6\Pract\task_1\my_task_1\obj\Debug\net6.0\my_task_1.AssemblyInfo.cs
+D:\ЛЕКЦИИ\LP\3Курс\6\Pract\task_1\my_task_1\obj\Debug\net6.0\my_task_1.csproj.CoreCompileInputs.cache
+D:\ЛЕКЦИИ\LP\3Курс\6\Pract\task_1\my_task_1\bin\Debug\net6.0\my_task_1.exe
+D:\ЛЕКЦИИ\LP\3Курс\6\Pract\task_1\my_task_1\bin\Debug\net6.0\my_task_1.deps.json
+D:\ЛЕКЦИИ\LP\3Курс\6\Pract\task_1\my_task_1\bin\Debug\net6.0\my_task_1.runtimeconfig.json
+D:\ЛЕКЦИИ\LP\3Курс\6\Pract\task_1\my_task_1\bin\Debug\net6.0\my_task_1.dll
+D:\ЛЕКЦИИ\LP\3Курс\6\Pract\task_1\my_task_1\bin\Debug\net6.0\ref\my_task_1.dll
+D:\ЛЕКЦИИ\LP\3Курс\6\Pract\task_1\my_task_1\bin\Debug\net6.0\my_task_1.pdb
+D:\ЛЕКЦИИ\LP\3Курс\6\Pract\task_1\my_task_1\obj\Debug\net6.0\my_task_1.dll
+D:\ЛЕКЦИИ\LP\3Курс\6\Pract\task_1\my_task_1\obj\Debug\net6.0\ref\my_task_1.dll
+D:\ЛЕКЦИИ\LP\3Курс\6\Pract\task_1\my_task_1\obj\Debug\net6.0\my_task_1.pdb
+D:\ЛЕКЦИИ\LP\3Курс\6\Pract\task_1\my_task_1\obj\Debug\net6.0\my_task_1.genruntimeconfig.cache
