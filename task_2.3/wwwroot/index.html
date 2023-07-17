@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>My Web App</title>
+</head>
+<body>
+    <h1>My Web App</h1>
+
+    <h2>Calculate BMI</h2>
+    <input type="number" id="weight" placeholder="Weight">
+    <input type="number" id="height" placeholder="Height">
+    <button onclick="calculateBMI()">Calculate</button>
+    <div id="bmiResult"></div>
+
+    <h2>Add Patient</h2>
+    <input type="text" id="fullName" placeholder="Full Name">
+    <input type="number" id="pat_weight" placeholder="Weight">
+    <input type="number" id="pat_height" placeholder="Height">
+    <input type="number" id="age" placeholder="Age">
+    <button onclick="addPatient()">Add Patient</button>
+    <div id="patientResult"></div>
+
+    <h2>BMI Statistics</h2>
+    <button onclick="getBMIStatistics()">Get Statistics</button>
+    <div id="statisticsResult"></div>
+
+    <h2>Age Statistics</h2>
+    <button onclick="getAgeStatistics()">Get Age Statistics</button>
+    <div id="ageStatisticsResult"></div>
+
+    <script src="site.js"></script>
+</body>
+</html>

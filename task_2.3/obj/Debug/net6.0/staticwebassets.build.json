@@ -1,0 +1,54 @@
+{
+  "Version": 1,
+  "Hash": "wgT5MSl/5nNQ/SpZVOLeqvITEUoyClRyVm7eFoS2HtM=",
+  "Source": "task_2.1.1",
+  "BasePath": "_content/task_2.1.1",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "task_2.1.1\\wwwroot",
+      "Source": "task_2.1.1",
+      "ContentRoot": "D:\\ЛЕКЦИИ\\LP\\3Курс\\6\\Pract\\task_2.3\\wwwroot\\",
+      "BasePath": "_content/task_2.1.1",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "D:\\ЛЕКЦИИ\\LP\\3Курс\\6\\Pract\\task_2.3\\wwwroot\\index.html",
+      "SourceId": "task_2.1.1",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ЛЕКЦИИ\\LP\\3Курс\\6\\Pract\\task_2.3\\wwwroot\\",
+      "BasePath": "_content/task_2.1.1",
+      "RelativePath": "index.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\index.html"
+    },
+    {
+      "Identity": "D:\\ЛЕКЦИИ\\LP\\3Курс\\6\\Pract\\task_2.3\\wwwroot\\site.js",
+      "SourceId": "task_2.1.1",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\ЛЕКЦИИ\\LP\\3Курс\\6\\Pract\\task_2.3\\wwwroot\\",
+      "BasePath": "_content/task_2.1.1",
+      "RelativePath": "site.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\site.js"
+    }
+  ]
+}

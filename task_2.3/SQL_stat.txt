@@ -1,0 +1,87 @@
+//Статистика по ИМТ
+
+SELECT
+    CASE
+        WHEN BMI <= 18.5 THEN 'Below Normal'
+        WHEN BMI < 25 THEN 'Normal'
+        WHEN BMI < 30 THEN 'Overweight'
+        ELSE 'Obese'
+    END AS Category,
+    COUNT(*) * 100.0 / (SELECT COUNT(*) FROM Patients) AS Percentage
+FROM
+    Patients
+GROUP BY
+    CASE
+        WHEN BMI <= 18.5 THEN 'Below Normal'
+        WHEN BMI < 25 THEN 'Normal'
+        WHEN BMI < 30 THEN 'Overweight'
+        ELSE 'Obese'
+    END
+ORDER BY
+    Percentage DESC;
+
+
+
+//Статистика по возрасту (процедура)
+
+CREATE OR REPLACE FUNCTION public.GetBMIStatisticsByAge()
+    RETURNS TABLE (
+        "Id" integer,
+        "AgeGroup" character varying,
+        "Category" character varying,
+        "Percentage" numeric
+    )
+AS $$
+BEGIN
+    RETURN QUERY
+    WITH AgeGroups AS (
+        SELECT
+            CASE
+                WHEN age BETWEEN 0 AND 10 THEN '0-10'::varchar
+            WHEN age BETWEEN 11 AND 20 THEN '11-20'::varchar
+            WHEN age BETWEEN 21 AND 30 THEN '21-30'::varchar
+            WHEN age BETWEEN 31 AND 40 THEN '31-40'::varchar
+			WHEN age BETWEEN 41 AND 50 THEN '41-50'::varchar
+			WHEN age BETWEEN 51 AND 60 THEN '51-60'::varchar
+			WHEN age BETWEEN 61 AND 70 THEN '61-70'::varchar
+			WHEN age BETWEEN 71 AND 80 THEN '71-80'::varchar
+			WHEN age BETWEEN 81 AND 90 THEN '81-90'::varchar
+			WHEN age BETWEEN 91 AND 100 THEN '91-100'::varchar
+                -- Добавьте здесь необходимые диапазоны возрастов
+                ELSE 'Other'::varchar
+            END AS agegroup,
+            CASE
+                WHEN bmi <= 18.5 THEN 'Below Normal'::varchar
+                WHEN bmi < 25 THEN 'Normal'::varchar
+                WHEN bmi < 30 THEN 'Overweight'::varchar
+                ELSE 'Obese'::varchar
+            END AS "Category",
+            COUNT(*) AS "Count"
+        FROM
+            public.patients
+        GROUP BY
+            agegroup, "Category"
+    ),
+    AgeGroupTotal AS (
+        SELECT
+            agegroup,
+            SUM("Count") AS "TotalCount"
+        FROM
+            AgeGroups
+        GROUP BY
+            agegroup
+    )
+    SELECT
+        -1 AS "Id", -- Можно указать любое отрицательное значение или NULL
+        ag.agegroup AS "AgeGroup",
+        ag."Category",
+        ag."Count" * 100.0 / agt."TotalCount" AS "Percentage"
+    FROM
+        AgeGroups ag
+    INNER JOIN
+        AgeGroupTotal agt ON ag.agegroup = agt.agegroup
+    ORDER BY
+        ag.agegroup, "Percentage" DESC;
+END;
+$$ LANGUAGE plpgsql;
+
