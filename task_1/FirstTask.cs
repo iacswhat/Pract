@@ -36,11 +36,6 @@
         {
             Console.Write("Введите число N: ");
             int endValue = Parser.ParseInt(1);
-            PrintSequence(1, endValue);
-        }
-
-        private static void PrintSequence(int startValue, int endValue)
-        {
             Console.Write(string.Join(", ", Enumerable.Range(1, endValue)));
             Console.WriteLine(".");
         }
@@ -52,11 +47,7 @@
         {
             Console.Write("Введите нечетное число N больше 3: ");
             int size = Parser.ParseInt(2);
-            DrawSquare(size);
-        }
 
-        private static void DrawSquare(int size)
-        {
             for (int i = 0; i < size; i++)
             {
                 for (int j = 0; j < size; j++)
